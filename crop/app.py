@@ -8,6 +8,21 @@ import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+import os
+
+# Get the current directory of app.py
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Construct full paths to your files
+model_path = os.path.join(BASE_DIR, 'crop_yield_model.keras')
+scaler_path = os.path.join(BASE_DIR, 'crop_scaler.pkl')
+columns_path = os.path.join(BASE_DIR, 'model_columns.pkl')
+
+# Load them using the new paths
+model = tf.keras.models.load_model(model_path)
+scaler = joblib.load(scaler_path)
+model_columns = joblib.load(columns_path)
+
 # --- LOAD ASSETS ---
 model = tf.keras.models.load_model('crop_yield_model.keras')
 scaler = joblib.load('crop_scaler.pkl')
