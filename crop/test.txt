@@ -1,0 +1,63 @@
+Test Case 1: High Yield Scenario (Rice in India)
+This test checks if the model recognizes high rainfall and moderate temperatures as a boost for Rice.
+
+Area: India
+
+Item: Rice
+
+Rainfall: 1200.0
+
+Temperature: 27.0
+
+Pesticides: 150.0
+
+Expected Result: A high yield value (usually above 25,000 hg/ha).
+
+
+Test Case 2: Extreme Climate Scenario (Potatoes in a Cold Region)
+This test checks if the model adjusts for different crop types and lower temperatures.
+
+Area: United Kingdom (or France)
+
+Item: Potatoes
+
+Rainfall: 800.0
+
+Temperature: 12.0
+
+Pesticides: 200.0
+
+Expected Result: Potatoes generally have very high hg/ha (often 100,000+), but the low temperature should moderate this
+
+
+
+Test 1: Using the Dry/Tilled Land Image
+Image Context: This image shows dry, tilled soil with very little vegetation and high sun exposure. This suggests a scenario where the land is prepared, but current moisture might be low or it's a high-temperature zone.
+
+Area: India (or any arid region)
+
+Item: Wheat
+
+Annual Rainfall (mm): 400.0 (Low rainfall context)
+
+Average Temperature (°C): 32.0 (High heat context)
+
+Pesticide Usage (Tonnes): 50.0
+
+Expected Result: The model should predict a lower to moderate yield because of the high temperature and low rainfall combination..
+
+
+Test 2: Using the Harvested/Dark Soil Image
+Image Context: This image shows darker, potentially more nutrient-rich soil with crop residue (like Maize/Corn stalks). Darker soil often indicates better organic matter or moisture retention.
+
+Area: USA (or Brazil)
+
+Item: Maize
+
+Annual Rainfall (mm): 1100.0 (Good rainfall context)
+
+Average Temperature (°C): 24.0 (Optimal growth context)
+
+Pesticide Usage (Tonnes): 180.0
+
+Expected Result: You should see a significantly higher yield (likely over 150,000 hg/ha). The model recognizes that Maize thrives in these specific moisture and temperature ranges.
